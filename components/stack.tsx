@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, Col, Row, Typography} from 'antd';
+import {Card, Col, Row} from 'antd';
 
-const {Title} = Typography;
 
 const TechStack = () => {
     const stacks = [
