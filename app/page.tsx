@@ -8,7 +8,6 @@ import {AiFillPhone} from "react-icons/ai";
 import SwiperComponent from "@/components/swiper";
 import Contact from "@/components/contacts";
 import Portfolio from "@/components/portfolio";
-import  testImg from "@/public/img.png"
 
 const Home = observer(() => {
     return (
@@ -54,7 +53,7 @@ const Home = observer(() => {
                 <div className="px-5 md:px-10 lg:px-20">
                     <Row gutter={[16, 16]}>
                         <Col data-aos="zoom-on" xs={24} sm={24} md={12} lg={12} xl={12}>
-                            <img src={String(testImg)} alt="" className="rounded-xl h-[400px]"/>
+                            <img src="/img.png" alt="" className="rounded-xl h-[400px]"/>
                         </Col>
                         <Col xs={24} sm={24} md={12} lg={12} xl={12}>
                         <div data-aos="fade-left">
