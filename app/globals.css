@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 5s ease-in-out;
+}
+
+.cursor{
+    z-index: 99996;
+    position: absolute;
+    background: #2696E8;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #00ff15,
+    0 0 60px #ffff00,
+    0 0 120px #ff9d00;
+    animation: colors 1.5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+
+}
+
+@keyframes colors{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.cursor:before{
+    content: '';
+    position: absolute;
+    background: #2696E8;
+    width: 70px;
+    height: 70px;
+    opacity: 0.07;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
