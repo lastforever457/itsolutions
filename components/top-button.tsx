@@ -1,15 +1,16 @@
 "use client";
 
-import React from "react";
-import { FaArrowUp } from "react-icons/fa";
 import { observer } from "mobx-react-lite";
+import { FaArrowUp } from "react-icons/fa";
 
 const TopButton = observer(() => {
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth", // Smooth scroll for a nice effect
-        });
+        if (typeof window !== "undefined") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Smooth scroll for a nice effect
+            });
+        }
     };
 
     return (
