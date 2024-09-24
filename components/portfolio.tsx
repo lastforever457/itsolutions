@@ -1,12 +1,6 @@
 import { Col, Row } from "antd";
 import { redirect } from "next/navigation";
 
-const handleBtn = () => {
-    redirect(
-        "https://cloud-solutions.uz/assets/slides/new-sloud-solutions-corporate-presentation.pdf"
-    );
-};
-
 // Array to hold portfolio data
 const portfolioItems = [
     {
@@ -57,6 +51,11 @@ const portfolioItems = [
 ];
 
 function Portfolio() {
+    const handleBtn = () => {
+        redirect(
+            "https://cloud-solutions.uz/assets/slides/new-sloud-solutions-corporate-presentation.pdf"
+        );
+    };
     return (
         <div
             id="portfolio"

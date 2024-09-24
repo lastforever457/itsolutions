@@ -2,7 +2,7 @@ import MainHeader from "@/components/main-header";
 import { Col, Row } from "antd";
 import "./index.css";
 
-function Page() {
+function AcademyInterested() {
     const texts = [
         {
             id: 1,
@@ -111,4 +111,4 @@ function Page() {
     );
 }
 
-export default Page;
+export default AcademyInterested;
