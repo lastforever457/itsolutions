@@ -19,4 +19,4 @@ class MyDocument extends Document {
     }
 }
 
-export default MyDocument; // MyDocument komponentini eksport qilish
+module.exports = MyDocument; // MyDocument komponentini eksport qilish
