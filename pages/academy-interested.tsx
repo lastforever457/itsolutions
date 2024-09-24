@@ -110,4 +110,4 @@ function AcademyInterested() {
     );
 }
 
-// export default AcademyInterested;
+export default AcademyInterested;
