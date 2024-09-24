@@ -10,8 +10,6 @@ import { observer } from "mobx-react-lite";
 import { AiFillPhone } from "react-icons/ai";
 
 const Home = observer(() => {
-    const {} = useRouterPush();
-
     return (
         <div id={"main"}>
             <div>
