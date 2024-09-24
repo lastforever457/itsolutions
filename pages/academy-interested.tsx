@@ -1,6 +1,5 @@
 import MainHeader from "@/components/main-header";
 import { Col, Row } from "antd";
-import "./index.css";
 
 function AcademyInterested() {
     const texts = [
