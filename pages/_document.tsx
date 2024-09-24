@@ -1,16 +1,22 @@
-import { observer } from "mobx-react-lite";
-import { Head, Html, Main, NextScript } from "next/document";
+// pages/_document.js
 
-const Document = observer(() => {
-    return (
-        <Html lang="en">
-            <Head />
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    );
-});
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
-export default Document;
+class MyDocument extends Document {
+    render() {
+        return (
+            <Html>
+                <Head>
+                    {/* Meta teglar yoki CSS fayllarini qo'shishingiz mumkin */}
+                    <link rel="stylesheet" href="/path/to/style.css" />
+                </Head>
+                <body>
+                    <Main /> {/* Sahifa komponentlari joylashadi */}
+                    <NextScript /> {/* Next.js scriptlari joylashadi */}
+                </body>
+            </Html>
+        );
+    }
+}
+
+export default MyDocument; // MyDocument komponentini eksport qilish
