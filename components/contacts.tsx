@@ -3,6 +3,7 @@
 import {Row, Col, Form, Input, Button, message} from "antd";
 import {AiOutlineMail} from "react-icons/ai";
 import {FaPhone, FaTelegramPlane, FaWhatsapp} from "react-icons/fa";
+import axios from "axios";
 
 const ContactSection = () => {
     const [form] = Form.useForm();
@@ -10,7 +11,9 @@ const ContactSection = () => {
     const onFinish = (values: any) => {
         console.log("Form values:", values);
         try {
-
+            const res = axios.post("https://cloud-solutions.uz/forms/contact.php", values);
+            console.log(res)
+            message.success("Xabaringiz mufaqiyatli yuborildi");
         } catch (e) {
             message.error("Xatolik yuz berdi")
         }
