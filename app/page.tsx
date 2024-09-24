@@ -7,6 +7,7 @@ import SwiperComponent from "@/components/swiper";
 import { defaultPadding } from "@/variables";
 import { Col, Row } from "antd";
 import { observer } from "mobx-react-lite";
+import { redirect } from "next/navigation";
 import { AiFillPhone } from "react-icons/ai";
 
 const Home = observer(() => {
@@ -24,12 +25,9 @@ const Home = observer(() => {
                 </video>
                 <div
                     onClick={() => {
-                        if (typeof window !== "undefined") {
-                            window.open(
-                                "https://www.google.com/maps/place/41%C2%B020'55.5%22N+69%C2%B020'14.4%22E/@41.348747,69.337344,16z/data=!4m4!3m3!8m2!3d41.348747!4d69.337344?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D",
-                                "_blank"
-                            );
-                        }
+                        redirect(
+                            "https://www.google.com/maps/place/41%C2%B020'55.5%22N+69%C2%B020'14.4%22E/@41.348747,69.337344,16z/data=!4m4!3m3!8m2!3d41.348747!4d69.337344?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
+                        );
                     }}
                     data-aos="fade-right"
                     className={`${defaultPadding} text-white w-[100%] min-h-[100vh] flex flex-col justify-center gap-3`}
@@ -45,9 +43,7 @@ const Home = observer(() => {
                             "bg-green-600 flex items-center justify-center gap-3 w-[330px] text-white px-5 py-3 rounded-md"
                         }
                         onClick={() => {
-                            if (typeof window !== "undefined") {
-                                window.location.href = "tel:+998889006003";
-                            }
+                            redirect("tel:+998889006003");
                         }}
                     >
                         <AiFillPhone />

@@ -1,12 +1,10 @@
 import { Col, Row } from "antd";
+import { redirect } from "next/navigation";
 
 const handleBtn = () => {
-    if (typeof window !== "undefined") {
-        window.open(
-            "https://cloud-solutions.uz/assets/slides/new-sloud-solutions-corporate-presentation.pdf",
-            "_blank"
-        );
-    }
+    redirect(
+        "https://cloud-solutions.uz/assets/slides/new-sloud-solutions-corporate-presentation.pdf"
+    );
 };
 
 // Array to hold portfolio data

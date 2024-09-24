@@ -2,6 +2,7 @@
 
 import { observer } from "mobx-react-lite";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 import { AiFillPhone } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
@@ -49,9 +50,7 @@ const MainHeader = observer(() => {
                     )}
                     <AiFillPhone
                         onClick={() => {
-                            if (typeof window !== "undefined") {
-                                window.location.href = "tel:+998 90 351 72 61";
-                            }
+                            redirect("tel:+998903517261");
                         }}
                         className="text-2xl cursor-pointer"
                     />
@@ -111,10 +110,7 @@ const MainHeader = observer(() => {
                     >
                         <AiFillPhone
                             onClick={() => {
-                                if (typeof window !== "undefined") {
-                                    window.location.href =
-                                        "tel:+998 90 351 72 61";
-                                }
+                                redirect("tel:+998903517261");
                             }}
                         />
                     </div>
