@@ -1,6 +1,7 @@
 "use client";
 
 import { Col, Row } from "antd";
+import { observer } from "mobx-react-lite";
 import SwiperCore from "swiper";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
@@ -8,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 SwiperCore.use([Autoplay]);
 
-export default function SwiperComponent() {
+const SwiperComponent = observer(() => {
     return (
         <Swiper
             className={"bg-black"}
@@ -224,4 +225,6 @@ export default function SwiperComponent() {
             </Row>
         </Swiper>
     );
-}
+});
+
+export default SwiperComponent;
