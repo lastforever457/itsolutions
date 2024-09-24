@@ -10,7 +10,7 @@ import { observer } from "mobx-react-lite";
 import { redirect } from "next/navigation";
 import { AiFillPhone } from "react-icons/ai";
 
-const Home = observer(() => {
+const HomePage = observer(() => {
     return (
         <div id={"main"}>
             <div>
@@ -105,4 +105,4 @@ const Home = observer(() => {
     );
 });
 
-export default Home;
+export default HomePage;

@@ -302,4 +302,4 @@ const BizHaqimizda = observer(() => {
     );
 });
 
-export default BizHaqimizda;
+// export default BizHaqimizda;
